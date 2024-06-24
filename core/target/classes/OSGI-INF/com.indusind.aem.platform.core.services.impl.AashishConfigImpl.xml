@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.indusind.aem.platform.core.services.impl.AashishConfigImpl" immediate="true" activate="activate">
+  <property name="isEnabled1" type="Boolean" value="true"/>
+  <property name="fullName1" type="String" value=""/>
+  <property name="custom1" type="String" value=""/>
+  <service>
+    <provide interface="com.indusind.aem.platform.core.services.impl.AashishConfigImpl"/>
+  </service>
+  <implementation class="com.indusind.aem.platform.core.services.impl.AashishConfigImpl"/>
+</scr:component>

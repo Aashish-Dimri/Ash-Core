@@ -1,0 +1,211 @@
+Data:
+<select class = "data_source" name = "source" value = "${properties.dataDropdown}"></select>
+<input class = "inp" type= "hidden" name="Insert Table" value="${properties.text1}"/>
+<sly data-sly-list.child="${resource.children}">
+   <sly data-sly-test="${child.name=='multi'}">
+      <sly data-sly-list.childItems="${child.children}">
+          <input class="inp" type="hidden" name="actualValue" value="${childItems.actualValue}">
+          <input class="inp" type="hidden" name="displayValue" value="${childItems.displayValue}"> 
+          <input class="inp" type="hidden" name="primaryValue" value="${childItems.primaryValue}">
+          <input class="inp" type="hidden" name="primaryCol" value="${childItems.primaryCol}">
+        </sly>
+   </sly>
+</sly>
+<sly data-sly-test="${properties.dataDropdown=='Json'}">
+   <select class = "data_source" name = "source" value = "${properties.dataDropdown}"></select>
+   <input type="url" class="jsons" type="hidden" id="homepage" name="jsonLink" value=${properties.links}><br>
+</sly>
+
+  <sly data-sly-test="${properties.dataDropdown=='File'}">
+  <select class = "data_source" name = "source" value = "${properties.dataDropdown}"></select>
+  <select class = "file_type" name = "file" id="type" value = "${properties.file}"></select>
+   <input class="filepath" type="text" type="hidden" name="path" id="files" value="${properties.documentPath}">
+  </sly>
+
+<script>
+   $(document).ready(function() {
+      var source = document.querySelector(".data_source").getAttribute("value");
+      if (source === "Database") {
+         var inputParameter = document.querySelectorAll(".inp");
+         var tags = [];
+         for (let i = 0; i < inputParameter.length; i++) {
+            tags[i] = inputParameter[i].getAttribute("value");
+         }
+         var dateToSend = {
+            'Source':source,
+            'Table':tags[0],
+            'Actual':tags[1],
+            'Display':tags[2],
+            'Primary':tags[3],
+            'PriCol':tags[4],
+         };
+         $.ajax({
+            url: "/bin/ayasya/runmode",
+            type: "POST",
+            data: dateToSend,
+            success: function(data) {
+               console.log("AJAX request successful");
+               console.log(data);
+               var name = data.split("\n");
+               var number = name[name.length-2];
+               var container = document.getElementById("container");
+               while (container.hasChildNodes()) {
+                  container.removeChild(container.lastChild);
+               }
+               for (i=0;i<number;i++){
+                var input = document.createElement("input");
+                input.id="inputText"+(i+1);
+                input.type = "text";
+                input.value = name[i];
+                container.appendChild(input);
+                input.setAttribute('readonly', true);
+                container.appendChild(document.createElement("br"));
+               }
+               $("#member").val(name[name.length-2]);
+            },
+            error: function(xhr, status, error) {
+               console.log("AJAX request error: " + error);
+            }
+         });
+      } else if (source === "Json") {
+         var jsonLink = document.getElementById("homepage").getAttribute("value");
+         console.log("jsonLink: " + jsonLink);
+         var dateToSend = {
+            'jsonLink': jsonLink
+         };
+         $.ajax({
+            url: "/bin/ayasya/runmode",
+            type: "POST",
+            data: dateToSend,
+            success: function(data) {
+               console.log("AJAX request successful");
+               console.log(data);
+               if (Array.isArray(data)) {
+                  var textOutput = "";
+                  for (let i = 0; i < data.length; i++) {
+                     if (
+                        data[i].hasOwnProperty("id") &&
+                        data[i].hasOwnProperty("name") &&
+                        data[i].hasOwnProperty("email")
+                     ) {
+                        var id = data[i].id;
+                        var name = data[i].name;
+                        var email = data[i].email;
+                        var phone = data[i].phone;
+                        textOutput +="id: " + id + "\nname: " + name + "\nemail: " +  email +  "\n\n";
+                     } else {
+                        console.log(
+                           "The 'id' field is missing in object at index " + i
+                        );
+                     }
+                  }
+
+                  var textOutput1 = "";
+                  for (let i = 0; i < data.length; i++) {
+                     if (data[i].id === 4) {
+                        var id = data[i].id;
+                        var name = data[i].name;
+                        var email = data[i].email;
+                        var phone = data[i].phone;
+                        textOutput1 +=  "id: " + id +   "\nname: " +  name +  "\nemail: " +  email + "\nphone: " + phone +  "\n\n";
+                     }
+                  }
+
+                  document.getElementById("myTextArea").innerHTML = textOutput;
+                  document.getElementById("myTextArea1").innerHTML = textOutput1;
+               } else {
+                  console.log("The JSON response is not an array.");
+               }
+            },
+            error: function(xhr, status, error) {
+               console.log("AJAX request error: " + error);
+            }
+         });
+      }  else if (source === "File") {
+         var path = document.getElementById("files").getAttribute("value");
+         var fileType = document.getElementById("type").getAttribute("value");
+var dateToSend = {
+            'source':"File",
+            'filePath': path,
+            'type': fileType
+         };
+console.log("Filepath: " + path);
+$.ajax({
+   url: "/bin/comp/file",
+   type: "POST",
+   data: dateToSend,
+   success: function(data) {
+      console.log("AJAX request successful");
+    if(path.endsWith(".csv")){
+     var lines = data.split('\r\n');
+     var header = lines[0].split(',');
+     var jsonData = [];
+     for (var i = 1; i < lines.length; i++) {
+       var values = lines[i].split(',');
+       var entry = {};
+      for (var j = 0; j < header.length; j++) {
+        entry[header[j]] = values[j];
+  }
+  jsonData.push(entry);
+}
+ document.getElementById("myTextArea").innerHTML = JSON.stringify(jsonData);
+     }
+     else{
+      document.getElementById("myTextArea").innerHTML = data;
+     }
+   },
+   error: function(xhr, status, error) {
+      console.log("AJAX request error: " + error);
+   }
+});
+
+      }
+   });
+
+
+</script>
+<input type="hidden" id="member" name="member" >
+<input type="submit" type="hidden" id="filldetails" onclick="addFields()" value="Fill Details">
+<div id="container"></div><br>
+
+<form name="" method="POST" action="/apps/demo/form">
+   <select id="actionSelect" name="action" onchange="dropDown()">
+      <option value="add">Add Record</option>
+      <option value="update">Update Record</option>
+      <option value="delete">Delete Record</option>
+   </select>
+   <br />
+   <div id="nameGroup">
+      <label for="firstName">Name</label><br>
+      <input id="firstName" type="text" name="firstName" ><br />
+   </div>
+   <label for="id">Id</label><br/>
+   <input id="id" type="number" name="id" class="id-field" > <br />
+   <div id="positionGroup">
+      <label for="position">Position</label><br>
+      <input id="position" type="text" name="position" />
+   </div>
+   <input type="submit" name="submit" value="submit">
+</form>
+<br>
+checking json data:-
+<br>
+<div id="jsonDiv">
+<textarea id="myTextArea" cols=125 rows=25></textarea>
+<textarea id="myTextArea1" cols=50 rows=25></textarea>
+</div>
+
+<script>
+   var dropdwonVal = document.getElementById("actionSelect");
+
+           function dropDown(){
+               var dropVal = dropdwonVal.options[dropdwonVal.selectedIndex].text;
+               if(dropVal == "Delete Record"){
+                   document.getElementById("nameGroup").style.display = "none";
+                   document.getElementById("positionGroup").style.display = "none";
+               }else{
+                   document.getElementById("nameGroup").style.display = "block";
+                   document.getElementById("positionGroup").style.display = "block";
+               }
+           }
+</script>

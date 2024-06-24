@@ -1,0 +1,93 @@
+<!--<div class="cmp-helloworld" data-cmp-is="helloworld">
+    <h2 class="cmp-helloworld__title">Ash Component</h2>
+    <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
+        <p class="cmp-helloworld__item-label">Text property:</p>
+        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${properties.text}</pre>
+    </div>
+    <div class="cmp-helloworld__item" data-sly-use.model="com.indusind.aem.platform.core.models.HelloWorldModel" data-sly-test="${model.message}">
+        <p class="cmp-helloworld__item-label"Kuch Sandesh:</p>
+        <input type="text" placeholder="message">
+        <input type="submit" value="Send">
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
+    </div>
+    <img src="${properties.img}"><br>
+    ${properties.title} <br> ANS:  ${properties.box} 
+</div>-->
+
+
+
+
+<form id="createNodeForm">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname">
+      <br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname">
+          <br>
+            <button type="button" onclick="saveData()">Submit</button>
+          </form>
+  
+  
+          <script>
+        debugger;
+            function saveData() {
+              debugger;
+            var fname = document.getElementById("fname").value;
+       var lastname = document.getElementById("lname").value;
+            debugger;
+  
+            var obj = {
+              "name":fname,
+                "lastname":lastname
+               };
+  
+            $.ajax({
+              url: "/bin/custom/nodeservlet",
+            type: 'POST',
+            data: JSON. stringify(obj),
+            cache: false,
+            contentType: 'application/json',
+            processData: false,
+  
+            success: function(data) {
+  
+  
+              alert("success");
+      },
+            error: function(xhr, status, error) {
+              console.log("AJAX request error: " + error);
+            alert("AJAX request error: " + error);
+      }
+    });
+  };
+          </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

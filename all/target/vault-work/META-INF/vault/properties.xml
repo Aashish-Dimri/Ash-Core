@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Indusind Sites Project - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="created">2024-06-24T11:45:57.211Z</entry>
+<entry key="groupId">com.adobe.aem.indusind</entry>
+<entry key="name">aem-indusind-platform.all</entry>
+<entry key="description">All content package for Indusind Sites Project</entry>
+<entry key="artifactId">aem-indusind-platform.all</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="packageType">container</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.adobe.aem.indusind</entry>
+</properties>

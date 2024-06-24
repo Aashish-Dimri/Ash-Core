@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: Indusind Sites Project - All
+Implementation-Version: 0.0.1-SNAPSHOT
+Content-Package-Type: container
+Content-Package-Id: com.adobe.aem.indusind:aem-indusind-platform.all:0.0
+ .1-SNAPSHOT
+Content-Package-Description: All content package for Indusind Sites Proj
+ ect
+Content-Package-Roots: /apps/Indusind-packages,/apps/Indusind-vendor-pac
+ kages
+

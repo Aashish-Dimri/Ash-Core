@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dropdown"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <selection
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Selection"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dropdown
+                                                granite:class="cq-dialog-dropdown-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Data Source "
+                                                name="./dataDropdown">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <Database
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Database"
+                                                        value="Database"/>
+                                                    <Json
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Json"
+                                                        value="Json"/>
+                                                    <file
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="File"
+                                                        value="File"/>
+                                                    <cloud
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Cloud"
+                                                        value="Cloud"/>
+                                                    <SOAP
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Soap"
+                                                        value="Soap"/>
+                                                    <REST
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Rest"
+                                                        value="Rest"/>
+                                                </items>
+                                            </dropdown>
+                                            <targetHead
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <targetDB
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="Database"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <text1
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Enter the table name according to DB"
+                                                                fieldLabel="Table Name"
+                                                                name="./text1"
+                                                                required="{Boolean}true"/>
+                                                            <multi
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldLabel="Select Columns to Display">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./multi">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <Actual_x0020_Name
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldDescription="Enter column name according to table"
+                                                                            fieldLabel="Actual Name"
+                                                                            name="./actualValue"/>
+                                                                        <Primary_x0020_Key_x0020_Value
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldDescription="Enter the value of Primary key"
+                                                                            fieldLabel="Primary Key Value"
+                                                                            name="./primaryValue"/>
+                                                                        <Display_x0020_Name
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldDescription="Enter value to be displayed in page"
+                                                                            fieldLabel="Display Name"
+                                                                            name="./displayValue"/>
+                                                                        <Primary_x0020_Col
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldDescription="Enter the Primary Column"
+                                                                            fieldLabel="Primary Column"
+                                                                            name="./primaryCol"/>
+                                                                    </items>
+                                                                </field>
+                                                            </multi>
+                                                        </items>
+                                                    </targetDB>
+                                                    <targetJSON
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        fieldLabel="⬇️&quot;STATES&quot;on the basis of country selection will appear below ⬇️">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="Json"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <links
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="paste link here"
+                                                                name="./links"
+                                                                text="typing"/>
+                                                        </items>
+                                                    </targetJSON>
+                                                    <targetFile
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        fieldLabel="choose the type of file">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="File"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <file
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                fieldLabel="Choose the type "
+                                                                name="./file">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <txt
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="txt"
+                                                                        value="txt"/>
+                                                                    <csv
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="csv"
+                                                                        value="csv"/>
+                                                                    <xlsx
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="xlsx"
+                                                                        value="xlsx"/>
+                                                                    <docx
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="docx"
+                                                                        value="docx"/>
+                                                                </items>
+                                                            </file>
+                                                        </items>
+                                                    </targetFile>
+                                                    <targetCloud
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="Cloud"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <link
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="paste link here"
+                                                                name="./link"
+                                                                text="typing"/>
+                                                        </items>
+                                                    </targetCloud>
+                                                    <Uploader
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        fieldLabel="Upload File"
+                                                        name="./Uploader">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="File"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <configuration
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Configuration"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                margin="{Boolean}true">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <columns
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                                        margin="{Boolean}true">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <column
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <documentPath
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                        fieldDescription="Path of Document."
+                                                                                        fieldLabel="Document Path"
+                                                                                        name="./documentPath"
+                                                                                        nodeTypes="dam:Asset, nt:file"
+                                                                                        required="{Boolean}true"
+                                                                                        rootPath="/content/dam"/>
+                                                                                </items>
+                                                                            </column>
+                                                                        </items>
+                                                                    </columns>
+                                                                </items>
+                                                            </configuration>
+                                                        </items>
+                                                    </Uploader>
+                                                </items>
+                                            </targetHead>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </selection>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

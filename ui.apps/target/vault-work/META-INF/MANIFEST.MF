@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: Indusind Sites Project - UI apps
+Implementation-Version: 0.0.1-SNAPSHOT
+Content-Package-Type: application
+Content-Package-Id: com.adobe.aem.indusind:aem-indusind-platform.ui.apps
+ :0.0.1-SNAPSHOT
+Content-Package-Description: UI apps package for Indusind Sites Project
+Content-Package-Dependencies: adobe/cq60:core.wcm.components.content:2.2
+ 2.10,adobe/cq60:core.wcm.components.config:2.22.10
+Content-Package-Dependencies-Locations: adobe/cq60:core.wcm.components.c
+ ontent:2.22.10=maven:com.adobe.cq:core.wcm.components.content:2.22.10:z
+ ip,adobe/cq60:core.wcm.components.config:2.22.10=maven:com.adobe.cq:cor
+ e.wcm.components.config:2.22.10:zip
+Content-Package-Roots: /apps/Indusind/clientlibs,/apps/Indusind/componen
+ ts,/apps/Indusind/i18n
+Import-Package: com.indusind.aem.platform.core.models;version="[1.0.0,2.
+ 0.0)",org.apache.sling.scripting.sightly;version="[2.0.0,3.0.0)"
+

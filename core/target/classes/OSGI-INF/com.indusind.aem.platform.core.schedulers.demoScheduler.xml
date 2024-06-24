@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.indusind.aem.platform.core.schedulers.demoScheduler" immediate="true" activate="activate" deactivate="deactivate">
+  <property name="serviceEnabled" type="Boolean" value="true"/>
+  <property name="schedulerName" type="String" value="OSGi R6 Annotation Scheduler Example"/>
+  <property name="schedulerConcurrent" type="Boolean" value="false"/>
+  <property name="schedulerExpression" type="String" value="*/30 * * * * ?"/>
+  <service>
+    <provide interface="java.lang.Runnable"/>
+  </service>
+  <reference name="scheduler" interface="org.apache.sling.commons.scheduler.Scheduler" field="scheduler"/>
+  <implementation class="com.indusind.aem.platform.core.schedulers.demoScheduler"/>
+</scr:component>

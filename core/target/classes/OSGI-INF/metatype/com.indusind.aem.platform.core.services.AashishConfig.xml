@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/com.indusind.aem.platform.core.services.AashishConfig">
+  <OCD id="com.indusind.aem.platform.core.services.AashishConfig" name="Aashish Service Configuration" description="Service Configuration">
+    <AD id="isEnabled1" type="Boolean" name="Enable" description="activate your cofiguration" default="true"/>
+    <AD id="fullName1" type="String" name="Full Name" description="fullname of the developer" default=""/>
+    <AD id="custom1" type="String" name="Custom Property" description="custom property" default=""/>
+  </OCD>
+  <Designate pid="com.indusind.aem.platform.core.services.impl.AashishConfigImpl">
+    <Object ocdref="com.indusind.aem.platform.core.services.AashishConfig"/>
+  </Designate>
+</metatype:MetaData>

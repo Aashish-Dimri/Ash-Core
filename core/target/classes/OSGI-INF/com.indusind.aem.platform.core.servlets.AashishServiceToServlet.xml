@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.indusind.aem.platform.core.servlets.AashishServiceToServlet">
+  <property name="sling.servlet.methods" type="String" value="GET"/>
+  <property name="sling.servlet.resourceTypes" type="String" value="Indusind/components/page"/>
+  <service>
+    <provide interface="javax.servlet.Servlet"/>
+  </service>
+  <reference name="ashImpl" interface="com.indusind.aem.platform.core.services.impl.AashishConfigImpl" field="ashImpl"/>
+  <implementation class="com.indusind.aem.platform.core.servlets.AashishServiceToServlet"/>
+</scr:component>

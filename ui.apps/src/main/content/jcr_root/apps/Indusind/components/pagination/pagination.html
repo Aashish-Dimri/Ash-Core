@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Display</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script>
+    function loadDoc1(){
+      var container = document.getElementById("content");
+      container.innerHTML = "";
+      $.getJSON("http://localhost:4502/bin/demo/querybuilder.0.0.1.html", function(data) {
+        for (var i = 0; i < 5; i++) {
+          var link = document.createElement("a");
+          link.href = data[i].url;
+          link.innerText =  data[i].title;
+          container.appendChild(link);
+          container.appendChild(document.createElement("br"));
+        }
+      })
+    }
+    function loadDoc2(){
+      var container = document.getElementById("content");
+      container.innerHTML = "";
+      $.getJSON("http://localhost:4502/bin/demo/querybuilder.0.0.1.html", function(data) {
+        for (var i = 5; i < 10; i++) {
+          var link = document.createElement("a");
+          link.href = data[i].url;
+          link.innerText =  data[i].title;
+          container.appendChild(link);
+          container.appendChild(document.createElement("br"));
+        }
+      })
+    }
+    function loadDoc3(){
+      var container = document.getElementById("content");
+      container.innerHTML = "";
+      $.getJSON("http://localhost:4502/bin/demo/querybuilder.0.0.1.html", function(data) {
+        for (var i = 10; i < 15; i++) {
+          var link = document.createElement("a");
+          link.href = data[i].url;
+          link.innerText =  data[i].title;
+          container.appendChild(link);
+          container.appendChild(document.createElement("br"));
+        }
+      })
+    }
+  </script>
+</head>
+
+<style>
+        #content,#buttons{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+     </style>
+
+<body>
+  <div id="content"></div>
+  <div id="buttons">
+    <button type="button" onclick="loadDoc1()">1</button>
+    <button type="button" onclick="loadDoc2()">2</button>
+    <button type="button" onclick="loadDoc3()">3</button>
+  </div>
+</body>
+</html>

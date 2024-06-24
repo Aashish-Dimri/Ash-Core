@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/com.indusind.aem.platform.core.schedulers.DemoConfig">
+  <OCD id="com.indusind.aem.platform.core.schedulers.DemoConfig" name="DemoConfig Scheduler Configurtions" description="DemoConfig Scheduler Configurtions">
+    <AD id="serviceEnabled" type="Boolean" name="Enabled" description="Enable Scheduler" default="true"/>
+    <AD id="schedulerName" type="String" name="Scheduler name" description="Scheduler name" default="OSGi\ R6\ Annotation\ Scheduler\ Example"/>
+    <AD id="schedulerConcurrent" type="Boolean" name="Concurrent" description="Schedule task concurrently" default="false"/>
+    <AD id="schedulerExpression" type="String" name="Expression" description="Cron-job expression. Default: run every hour." default="*/30\ *\ *\ *\ *\ ?"/>
+  </OCD>
+  <Designate pid="com.indusind.aem.platform.core.schedulers.demoScheduler">
+    <Object ocdref="com.indusind.aem.platform.core.schedulers.DemoConfig"/>
+  </Designate>
+</metatype:MetaData>

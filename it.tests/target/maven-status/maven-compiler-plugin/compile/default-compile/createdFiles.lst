@@ -1,0 +1,4 @@
+com\indusind\aem\platform\it\tests\CreatePageIT.class
+com\indusind\aem\platform\it\tests\GetPageIT.class
+com\indusind\aem\platform\it\tests\HtmlUnitClient.class
+com\indusind\aem\platform\it\tests\PublishPageValidationIT.class

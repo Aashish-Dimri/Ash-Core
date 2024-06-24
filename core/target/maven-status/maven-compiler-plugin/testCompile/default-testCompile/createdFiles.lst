@@ -1,0 +1,7 @@
+com\indusind\aem\platform\core\listeners\SimpleResourceListenerTest.class
+com\indusind\aem\platform\core\models\HelloWorldModelTest.class
+com\indusind\aem\platform\core\testcontext\AppAemContext$1.class
+com\indusind\aem\platform\core\schedulers\SimpleScheduledTaskTest.class
+com\indusind\aem\platform\core\filters\LoggingFilterTest.class
+com\indusind\aem\platform\core\servlets\SimpleServletTest.class
+com\indusind\aem\platform\core\testcontext\AppAemContext.class
