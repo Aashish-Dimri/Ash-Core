@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/Indusind" mode="merge"/>
+    <filter root="/content/Indusind" mode="merge"/>
+    <filter root="/content/dam/Indusind/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/Indusind" mode="merge"/>
+</workspaceFilter>

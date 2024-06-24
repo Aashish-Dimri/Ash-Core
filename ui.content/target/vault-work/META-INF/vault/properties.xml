@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Indusind Sites Project - UI content</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="acHandling">merge</entry>
+<entry key="dependencies-locations">com.adobe.aem.indusind:aem-indusind-platform.ui.apps:0.0.1-SNAPSHOT=maven:com.adobe.aem.indusind:aem-indusind-platform.ui.apps:0.0.1-SNAPSHOT:zip</entry>
+<entry key="created">2024-06-24T12:12:26.733Z</entry>
+<entry key="groupId">com.adobe.aem.indusind</entry>
+<entry key="description">UI content package for Indusind Sites Project</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="packageType">content</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="dependencies">com.adobe.aem.indusind:aem-indusind-platform.ui.apps:0.0.1-SNAPSHOT</entry>
+<entry key="cloudManagerTarget">none</entry>
+<entry key="name">aem-indusind-platform.ui.content</entry>
+<entry key="artifactId">aem-indusind-platform.ui.content</entry>
+<entry key="group">com.adobe.aem.indusind</entry>
+</properties>

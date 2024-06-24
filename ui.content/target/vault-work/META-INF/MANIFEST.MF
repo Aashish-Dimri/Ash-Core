@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: Indusind Sites Project - UI content
+Implementation-Version: 0.0.1-SNAPSHOT
+Content-Package-Type: content
+Content-Package-Id: com.adobe.aem.indusind:aem-indusind-platform.ui.cont
+ ent:0.0.1-SNAPSHOT
+Content-Package-Description: UI content package for Indusind Sites Proje
+ ct
+Content-Package-Dependencies: com.adobe.aem.indusind:aem-indusind-platfo
+ rm.ui.apps:0.0.1-SNAPSHOT
+Content-Package-Dependencies-Locations: com.adobe.aem.indusind:aem-indus
+ ind-platform.ui.apps:0.0.1-SNAPSHOT=maven:com.adobe.aem.indusind:aem-in
+ dusind-platform.ui.apps:0.0.1-SNAPSHOT:zip
+Content-Package-Roots: /conf/Indusind,/content/Indusind,/content/dam/Ind
+ usind/asset.jpg,/content/experience-fragments/Indusind
+
