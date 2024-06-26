@@ -26,17 +26,18 @@ Import-Package: javax.annotation;version="0.0.0",com.adobe.granite.wor
  ind.aem.platform.core.listeners;version="[1.0,2)",com.indusind.aem.pl
  atform.core.schedulers;version="[1.0,2)",javax.jcr;version="[2.0,3)",
  javax.jcr.observation;version="[2.0,3)",javax.servlet;version="[3.1,4
- )",org.apache.sling.api;version="[2.3,3)",org.apache.sling.api.reques
- t;version="[2.4,3)",org.apache.sling.api.resource;version="[2.12,3)",
- org.apache.sling.api.resource.observation;version="[1.2,2)",org.apach
- e.sling.api.servlets;version="[2.3,3)",org.apache.sling.commons.sched
- uler;version="[2.5,3)",org.apache.sling.event.jobs;version="[2.0,3)",
- org.apache.sling.event.jobs.consumer;version="[1.2,2)",org.apache.sli
- ng.jcr.api;version="[2.4,3)",org.apache.sling.models.annotations;vers
- ion="[1.5,2)",org.apache.sling.models.annotations.injectorspecific;ve
- rsion="[1.1,2)",org.apache.sling.settings;version="[1.3,2)",org.osgi.
- service.component;version="[1.4,2)",org.osgi.service.event;version="[
- 1.3,2)",org.slf4j;version="[1.7,2)"
+ )",org.apache.poi.ss.usermodel;version="[3.0,4)",org.apache.poi.xssf.
+ usermodel;version="[3.0,4)",org.apache.sling.api;version="[2.3,3)",or
+ g.apache.sling.api.request;version="[2.4,3)",org.apache.sling.api.res
+ ource;version="[2.12,3)",org.apache.sling.api.resource.observation;ve
+ rsion="[1.2,2)",org.apache.sling.api.servlets;version="[2.3,3)",org.a
+ pache.sling.commons.scheduler;version="[2.5,3)",org.apache.sling.even
+ t.jobs;version="[2.0,3)",org.apache.sling.event.jobs.consumer;version
+ ="[1.2,2)",org.apache.sling.jcr.api;version="[2.4,3)",org.apache.slin
+ g.models.annotations;version="[1.5,2)",org.apache.sling.models.annota
+ tions.injectorspecific;version="[1.1,2)",org.apache.sling.settings;ve
+ rsion="[1.3,2)",org.osgi.service.component;version="[1.4,2)",org.osgi
+ .service.event;version="[1.3,2)",org.slf4j;version="[1.7,2)"
 Private-Package: com.indusind.aem.platform.core.jobs,com.indusind.aem.
  platform.core.services,com.indusind.aem.platform.core.services.impl,c
  om.indusind.aem.platform.core.workflow
@@ -90,13 +91,14 @@ Service-Component: OSGI-INF/com.indusind.aem.platform.core.filters.Log
  NF/com.indusind.aem.platform.core.servlets.AashishServiceToServlet.xm
  l,OSGI-INF/com.indusind.aem.platform.core.servlets.CustomSearchServle
  t.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.DemoMicroservi
- ceServlet.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.QueryB
- uilderServlet.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.Ru
- nModes.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.SimpleSer
- vlet.xml,OSGI-INF/com.indusind.aem.platform.core.workflow.AshWorkflow
- Step.xml,OSGI-INF/com.indusind.aem.platform.core.workflow.AshsWorkflo
- wProcess.xml,OSGI-INF/com.indusind.aem.platform.core.workflow.Workflo
- wServlet.xml
+ ceServlet.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.ExcelT
+ oJSON.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.QueryBuild
+ erServlet.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.RunMod
+ es.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.SimpleServlet
+ .xml,OSGI-INF/com.indusind.aem.platform.core.workflow.AshWorkflowStep
+ .xml,OSGI-INF/com.indusind.aem.platform.core.workflow.AshsWorkflowPro
+ cess.xml,OSGI-INF/com.indusind.aem.platform.core.workflow.WorkflowSer
+ vlet.xml
 Sling-Model-Classes: com.indusind.aem.platform.core.models.AashishServ
  iceToModel,com.indusind.aem.platform.core.models.AppModel,com.indusin
  d.aem.platform.core.models.AuthorImpl,com.indusind.aem.platform.core.
