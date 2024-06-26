@@ -102,5 +102,6 @@ Service-Component: OSGI-INF/com.indusind.aem.platform.core.filters.Log
 Sling-Model-Classes: com.indusind.aem.platform.core.models.AashishServ
  iceToModel,com.indusind.aem.platform.core.models.AppModel,com.indusin
  d.aem.platform.core.models.AuthorImpl,com.indusind.aem.platform.core.
- models.HelloWorldModel
+ models.HelloWorldModel,com.indusind.aem.platform.core.models.MegaMenu
+ Model
 
