@@ -34,7 +34,7 @@ public final class headerComp__002e__html extends RenderUnit {
                                 RenderContext renderContext) {
 // Main Template Body -----------------------------------------------------------------------------
 
-out.write("<header class=\"header\" data-cmp-is=\"header\">\n\n</header>");
+out.write("<header class=\"header\" data-cmp-is=\"header\">\r\n\r\n</header>");
 
 
 // End Of Main Template Body ----------------------------------------------------------------------

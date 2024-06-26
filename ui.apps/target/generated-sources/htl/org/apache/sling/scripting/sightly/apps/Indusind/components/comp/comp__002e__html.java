@@ -37,7 +37,7 @@ public final class comp__002e__html extends RenderUnit {
 Object _dynamic_pageproperties = bindings.get("pageproperties");
 Object _global_template = null;
 {
-    String var_0 = (renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_pageproperties, "customTab"), "text")) + "\n");
+    String var_0 = (renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_pageproperties, "customTab"), "text")) + "\r\n");
     out.write(renderContext.getObjectModel().toString(var_0));
 }
 _global_template = renderContext.call("use", "core/wcm/components/commons/vi/templates.html", obj());

@@ -34,7 +34,7 @@ public final class footerComp__002e__html extends RenderUnit {
                                 RenderContext renderContext) {
 // Main Template Body -----------------------------------------------------------------------------
 
-out.write("<footer class=\"footer\" data-cmp-is=\"footer\">\n\n</footer>");
+out.write("<footer class=\"footer\" data-cmp-is=\"footer\">\r\n\r\n</footer>");
 
 
 // End Of Main Template Body ----------------------------------------------------------------------

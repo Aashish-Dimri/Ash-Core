@@ -43,33 +43,36 @@ Private-Package: com.indusind.aem.platform.core.jobs,com.indusind.aem.
 Provide-Capability: osgi.service;objectClass:List<String>="com.adobe.g
  ranite.workflow.exec.WorkflowProcess";uses:="com.adobe.granite.workfl
  ow.exec",osgi.service;objectClass:List<String>="com.indusind.aem.plat
- form.core.services.ReadWriteServiceImpl";uses:="com.indusind.aem.plat
- form.core.services",osgi.service;objectClass:List<String>="com.indusi
- nd.aem.platform.core.services.impl.AashishConfigImpl";uses:="com.indu
- sind.aem.platform.core.services.impl",osgi.service;objectClass:List<S
- tring>="java.lang.Runnable",osgi.service;objectClass:List<String>="ja
- vax.jcr.observation.EventListener";uses:="javax.jcr.observation",osgi
- .service;objectClass:List<String>="javax.servlet.Filter";uses:="javax
- .servlet",osgi.service;objectClass:List<String>="javax.servlet.Servle
- t";uses:="javax.servlet",osgi.service;objectClass:List<String>="org.a
- pache.sling.api.resource.observation.ResourceChangeListener";uses:="o
- rg.apache.sling.api.resource.observation",osgi.service;objectClass:Li
- st<String>="org.apache.sling.event.jobs.consumer.JobConsumer";uses:="
- org.apache.sling.event.jobs.consumer",osgi.service;objectClass:List<S
- tring>="org.osgi.service.event.EventHandler";uses:="org.osgi.service.
- event"
+ form.core.services.DemoMicroService";uses:="com.indusind.aem.platform
+ .core.services",osgi.service;objectClass:List<String>="com.indusind.a
+ em.platform.core.services.ReadWriteServiceImpl";uses:="com.indusind.a
+ em.platform.core.services",osgi.service;objectClass:List<String>="com
+ .indusind.aem.platform.core.services.impl.AashishConfigImpl";uses:="c
+ om.indusind.aem.platform.core.services.impl",osgi.service;objectClass
+ :List<String>="java.lang.Runnable",osgi.service;objectClass:List<Stri
+ ng>="javax.jcr.observation.EventListener";uses:="javax.jcr.observatio
+ n",osgi.service;objectClass:List<String>="javax.servlet.Filter";uses:
+ ="javax.servlet",osgi.service;objectClass:List<String>="javax.servlet
+ .Servlet";uses:="javax.servlet",osgi.service;objectClass:List<String>
+ ="org.apache.sling.api.resource.observation.ResourceChangeListener";u
+ ses:="org.apache.sling.api.resource.observation",osgi.service;objectC
+ lass:List<String>="org.apache.sling.event.jobs.consumer.JobConsumer";
+ uses:="org.apache.sling.event.jobs.consumer",osgi.service;objectClass
+ :List<String>="org.osgi.service.event.EventHandler";uses:="org.osgi.s
+ ervice.event"
 Require-Capability: osgi.service;filter:="(objectClass=com.day.cq.sear
  ch.QueryBuilder)";effective:=active,osgi.service;filter:="(objectClas
- s=com.indusind.aem.platform.core.services.impl.AashishConfigImpl)";ef
- fective:=active,osgi.service;filter:="(objectClass=org.apache.sling.a
- pi.resource.ResourceResolverFactory)";effective:=active,osgi.service;
- filter:="(objectClass=org.apache.sling.commons.scheduler.Scheduler)";
- effective:=active,osgi.service;filter:="(objectClass=org.apache.sling
- .jcr.api.SlingRepository)";effective:=active,osgi.service;filter:="(o
- bjectClass=org.apache.sling.settings.SlingSettingsService)";effective
- :=active,osgi.extender;filter:="(&(osgi.extender=osgi.component)(vers
- ion>=1.4.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(
- version=1.8))"
+ s=com.indusind.aem.platform.core.services.DemoMicroService)";effectiv
+ e:=active,osgi.service;filter:="(objectClass=com.indusind.aem.platfor
+ m.core.services.impl.AashishConfigImpl)";effective:=active,osgi.servi
+ ce;filter:="(objectClass=org.apache.sling.api.resource.ResourceResolv
+ erFactory)";effective:=active,osgi.service;filter:="(objectClass=org.
+ apache.sling.commons.scheduler.Scheduler)";effective:=active,osgi.ser
+ vice;filter:="(objectClass=org.apache.sling.jcr.api.SlingRepository)"
+ ;effective:=active,osgi.service;filter:="(objectClass=org.apache.slin
+ g.settings.SlingSettingsService)";effective:=active,osgi.extender;fil
+ ter:="(&(osgi.extender=osgi.component)(version>=1.4.0)(!(version>=2.0
+ .0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Service-Component: OSGI-INF/com.indusind.aem.platform.core.filters.Log
  gingFilter.xml,OSGI-INF/com.indusind.aem.platform.core.jobs.MyProject
  JobConsumer.xml,OSGI-INF/com.indusind.aem.platform.core.jobs.MyProjec
@@ -80,18 +83,20 @@ Service-Component: OSGI-INF/com.indusind.aem.platform.core.filters.Log
  orm.core.listeners.SimpleResourceListener.xml,OSGI-INF/com.indusind.a
  em.platform.core.schedulers.SimpleScheduledTask.xml,OSGI-INF/com.indu
  sind.aem.platform.core.schedulers.demoScheduler.xml,OSGI-INF/com.indu
- sind.aem.platform.core.services.ReadWriteServiceImpl.xml,OSGI-INF/com
- .indusind.aem.platform.core.services.impl.AashishConfigImpl.xml,OSGI-
- INF/com.indusind.aem.platform.core.servlets.AIchatServlet.xml,OSGI-IN
- F/com.indusind.aem.platform.core.servlets.AashishServiceToServlet.xml
- ,OSGI-INF/com.indusind.aem.platform.core.servlets.CustomSearchServlet
- .xml,OSGI-INF/com.indusind.aem.platform.core.servlets.QueryBuilderSer
- vlet.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.RunModes.xm
- l,OSGI-INF/com.indusind.aem.platform.core.servlets.SimpleServlet.xml,
- OSGI-INF/com.indusind.aem.platform.core.workflow.AshWorkflowStep.xml,
- OSGI-INF/com.indusind.aem.platform.core.workflow.AshsWorkflowProcess.
- xml,OSGI-INF/com.indusind.aem.platform.core.workflow.WorkflowServlet.
- xml
+ sind.aem.platform.core.services.DemoMicroService.xml,OSGI-INF/com.ind
+ usind.aem.platform.core.services.ReadWriteServiceImpl.xml,OSGI-INF/co
+ m.indusind.aem.platform.core.services.impl.AashishConfigImpl.xml,OSGI
+ -INF/com.indusind.aem.platform.core.servlets.AIchatServlet.xml,OSGI-I
+ NF/com.indusind.aem.platform.core.servlets.AashishServiceToServlet.xm
+ l,OSGI-INF/com.indusind.aem.platform.core.servlets.CustomSearchServle
+ t.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.DemoMicroservi
+ ceServlet.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.QueryB
+ uilderServlet.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.Ru
+ nModes.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.SimpleSer
+ vlet.xml,OSGI-INF/com.indusind.aem.platform.core.workflow.AshWorkflow
+ Step.xml,OSGI-INF/com.indusind.aem.platform.core.workflow.AshsWorkflo
+ wProcess.xml,OSGI-INF/com.indusind.aem.platform.core.workflow.Workflo
+ wServlet.xml
 Sling-Model-Classes: com.indusind.aem.platform.core.models.AashishServ
  iceToModel,com.indusind.aem.platform.core.models.AppModel,com.indusin
  d.aem.platform.core.models.AuthorImpl,com.indusind.aem.platform.core.

@@ -38,7 +38,7 @@ Object _dynamic_properties = bindings.get("properties");
 Object _dynamic_resource = bindings.get("resource");
 Collection var_collectionvar8_list_coerced$ = null;
 Collection var_collectionvar19_list_coerced$ = null;
-out.write("Data:\n<select class=\"data_source\" name=\"source\"");
+out.write("Data:\r\n<select class=\"data_source\" name=\"source\"");
 {
     Object var_attrvalue0 = renderContext.getObjectModel().resolveProperty(_dynamic_properties, "dataDropdown");
     {
@@ -59,7 +59,7 @@ out.write("Data:\n<select class=\"data_source\" name=\"source\"");
         }
     }
 }
-out.write("></select>\n<input class=\"inp\" type=\"hidden\" name=\"Insert Table\"");
+out.write("></select>\r\n<input class=\"inp\" type=\"hidden\" name=\"Insert Table\"");
 {
     Object var_attrvalue4 = renderContext.getObjectModel().resolveProperty(_dynamic_properties, "text1");
     {
@@ -80,7 +80,7 @@ out.write("></select>\n<input class=\"inp\" type=\"hidden\" name=\"Insert Table\
         }
     }
 }
-out.write("/>\n");
+out.write("/>\r\n");
 {
     Object var_collectionvar8 = renderContext.getObjectModel().resolveProperty(_dynamic_resource, "children");
     {
@@ -101,11 +101,11 @@ out.write("/>\n");
                                 {
                                     boolean var_traversal17 = (((var_index15 >= 0) && (var_index15 <= var_end13)) && true);
                                     if (var_traversal17) {
-                                        out.write("\n   ");
+                                        out.write("\r\n   ");
                                         {
                                             boolean var_testvariable18 = (org.apache.sling.scripting.sightly.compiler.expression.nodes.BinaryOperator.strictEq(renderContext.getObjectModel().resolveProperty(child, "name"), "multi"));
                                             if (var_testvariable18) {
-                                                out.write("\n      ");
+                                                out.write("\r\n      ");
                                                 {
                                                     Object var_collectionvar19 = renderContext.getObjectModel().resolveProperty(child, "children");
                                                     {
@@ -126,7 +126,7 @@ out.write("/>\n");
                                                                                 {
                                                                                     boolean var_traversal28 = (((var_index26 >= 0) && (var_index26 <= var_end24)) && true);
                                                                                     if (var_traversal28) {
-                                                                                        out.write("\n          <input class=\"inp\" type=\"hidden\" name=\"actualValue\"");
+                                                                                        out.write("\r\n          <input class=\"inp\" type=\"hidden\" name=\"actualValue\"");
                                                                                         {
                                                                                             Object var_attrvalue29 = renderContext.getObjectModel().resolveProperty(childitems, "actualValue");
                                                                                             {
@@ -147,7 +147,7 @@ out.write("/>\n");
                                                                                                 }
                                                                                             }
                                                                                         }
-                                                                                        out.write("/>\n          <input class=\"inp\" type=\"hidden\" name=\"displayValue\"");
+                                                                                        out.write("/>\r\n          <input class=\"inp\" type=\"hidden\" name=\"displayValue\"");
                                                                                         {
                                                                                             Object var_attrvalue33 = renderContext.getObjectModel().resolveProperty(childitems, "displayValue");
                                                                                             {
@@ -168,7 +168,7 @@ out.write("/>\n");
                                                                                                 }
                                                                                             }
                                                                                         }
-                                                                                        out.write("/> \n          <input class=\"inp\" type=\"hidden\" name=\"primaryValue\"");
+                                                                                        out.write("/> \r\n          <input class=\"inp\" type=\"hidden\" name=\"primaryValue\"");
                                                                                         {
                                                                                             Object var_attrvalue37 = renderContext.getObjectModel().resolveProperty(childitems, "primaryValue");
                                                                                             {
@@ -189,7 +189,7 @@ out.write("/>\n");
                                                                                                 }
                                                                                             }
                                                                                         }
-                                                                                        out.write("/>\n          <input class=\"inp\" type=\"hidden\" name=\"primaryCol\"");
+                                                                                        out.write("/>\r\n          <input class=\"inp\" type=\"hidden\" name=\"primaryCol\"");
                                                                                         {
                                                                                             Object var_attrvalue41 = renderContext.getObjectModel().resolveProperty(childitems, "primaryCol");
                                                                                             {
@@ -210,7 +210,7 @@ out.write("/>\n");
                                                                                                 }
                                                                                             }
                                                                                         }
-                                                                                        out.write("/>\n        ");
+                                                                                        out.write("/>\r\n        ");
                                                                                     }
                                                                                 }
                                                                                 var_index26++;
@@ -223,10 +223,10 @@ out.write("/>\n");
                                                     }
                                                     var_collectionvar19_list_coerced$ = null;
                                                 }
-                                                out.write("\n   ");
+                                                out.write("\r\n   ");
                                             }
                                         }
-                                        out.write("\n");
+                                        out.write("\r\n");
                                     }
                                 }
                                 var_index15++;
@@ -239,11 +239,11 @@ out.write("/>\n");
     }
     var_collectionvar8_list_coerced$ = null;
 }
-out.write("\n");
+out.write("\r\n");
 {
     boolean var_testvariable45 = (org.apache.sling.scripting.sightly.compiler.expression.nodes.BinaryOperator.strictEq(renderContext.getObjectModel().resolveProperty(_dynamic_properties, "dataDropdown"), "Json"));
     if (var_testvariable45) {
-        out.write("\n   <select class=\"data_source\" name=\"source\"");
+        out.write("\r\n   <select class=\"data_source\" name=\"source\"");
         {
             Object var_attrvalue46 = renderContext.getObjectModel().resolveProperty(_dynamic_properties, "dataDropdown");
             {
@@ -264,7 +264,7 @@ out.write("\n");
                 }
             }
         }
-        out.write("></select>\n   <input type=\"hidden\" class=\"jsons\" id=\"homepage\" name=\"jsonLink\"");
+        out.write("></select>\r\n   <input type=\"hidden\" class=\"jsons\" id=\"homepage\" name=\"jsonLink\"");
         {
             Object var_attrvalue50 = renderContext.getObjectModel().resolveProperty(_dynamic_properties, "links");
             {
@@ -285,14 +285,14 @@ out.write("\n");
                 }
             }
         }
-        out.write("/><br/>\n");
+        out.write("/><br/>\r\n");
     }
 }
-out.write("\n\n  ");
+out.write("\r\n\r\n  ");
 {
     boolean var_testvariable54 = (org.apache.sling.scripting.sightly.compiler.expression.nodes.BinaryOperator.strictEq(renderContext.getObjectModel().resolveProperty(_dynamic_properties, "dataDropdown"), "File"));
     if (var_testvariable54) {
-        out.write("\n  <select class=\"data_source\" name=\"source\"");
+        out.write("\r\n  <select class=\"data_source\" name=\"source\"");
         {
             Object var_attrvalue55 = renderContext.getObjectModel().resolveProperty(_dynamic_properties, "dataDropdown");
             {
@@ -313,7 +313,7 @@ out.write("\n\n  ");
                 }
             }
         }
-        out.write("></select>\n  <select class=\"file_type\" name=\"file\" id=\"type\"");
+        out.write("></select>\r\n  <select class=\"file_type\" name=\"file\" id=\"type\"");
         {
             Object var_attrvalue59 = renderContext.getObjectModel().resolveProperty(_dynamic_properties, "file");
             {
@@ -334,7 +334,7 @@ out.write("\n\n  ");
                 }
             }
         }
-        out.write("></select>\n   <input class=\"filepath\" type=\"hidden\" name=\"path\" id=\"files\"");
+        out.write("></select>\r\n   <input class=\"filepath\" type=\"hidden\" name=\"path\" id=\"files\"");
         {
             Object var_attrvalue63 = renderContext.getObjectModel().resolveProperty(_dynamic_properties, "documentPath");
             {
@@ -355,10 +355,10 @@ out.write("\n\n  ");
                 }
             }
         }
-        out.write("/>\n  ");
+        out.write("/>\r\n  ");
     }
 }
-out.write("\n\n<script>\n   $(document).ready(function() {\n      var source = document.querySelector(\".data_source\").getAttribute(\"value\");\n      if (source === \"Database\") {\n         var inputParameter = document.querySelectorAll(\".inp\");\n         var tags = [];\n         for (let i = 0; i < inputParameter.length; i++) {\n            tags[i] = inputParameter[i].getAttribute(\"value\");\n         }\n         var dateToSend = {\n            'Source':source,\n            'Table':tags[0],\n            'Actual':tags[1],\n            'Display':tags[2],\n            'Primary':tags[3],\n            'PriCol':tags[4],\n         };\n         $.ajax({\n            url: \"/bin/ayasya/runmode\",\n            type: \"POST\",\n            data: dateToSend,\n            success: function(data) {\n               console.log(\"AJAX request successful\");\n               console.log(data);\n               var name = data.split(\"\\n\");\n               var number = name[name.length-2];\n               var container = document.getElementById(\"container\");\n               while (container.hasChildNodes()) {\n                  container.removeChild(container.lastChild);\n               }\n               for (i=0;i<number;i++){\n                var input = document.createElement(\"input\");\n                input.id=\"inputText\"+(i+1);\n                input.type = \"text\";\n                input.value = name[i];\n                container.appendChild(input);\n                input.setAttribute('readonly', true);\n                container.appendChild(document.createElement(\"br\"));\n               }\n               $(\"#member\").val(name[name.length-2]);\n            },\n            error: function(xhr, status, error) {\n               console.log(\"AJAX request error: \" + error);\n            }\n         });\n      } else if (source === \"Json\") {\n         var jsonLink = document.getElementById(\"homepage\").getAttribute(\"value\");\n         console.log(\"jsonLink: \" + jsonLink);\n         var dateToSend = {\n            'jsonLink': jsonLink\n         };\n         $.ajax({\n            url: \"/bin/ayasya/runmode\",\n            type: \"POST\",\n            data: dateToSend,\n            success: function(data) {\n               console.log(\"AJAX request successful\");\n               console.log(data);\n               if (Array.isArray(data)) {\n                  var textOutput = \"\";\n                  for (let i = 0; i < data.length; i++) {\n                     if (\n                        data[i].hasOwnProperty(\"id\") &&\n                        data[i].hasOwnProperty(\"name\") &&\n                        data[i].hasOwnProperty(\"email\")\n                     ) {\n                        var id = data[i].id;\n                        var name = data[i].name;\n                        var email = data[i].email;\n                        var phone = data[i].phone;\n                        textOutput +=\"id: \" + id + \"\\nname: \" + name + \"\\nemail: \" +  email +  \"\\n\\n\";\n                     } else {\n                        console.log(\n                           \"The 'id' field is missing in object at index \" + i\n                        );\n                     }\n                  }\n\n                  var textOutput1 = \"\";\n                  for (let i = 0; i < data.length; i++) {\n                     if (data[i].id === 4) {\n                        var id = data[i].id;\n                        var name = data[i].name;\n                        var email = data[i].email;\n                        var phone = data[i].phone;\n                        textOutput1 +=  \"id: \" + id +   \"\\nname: \" +  name +  \"\\nemail: \" +  email + \"\\nphone: \" + phone +  \"\\n\\n\";\n                     }\n                  }\n\n                  document.getElementById(\"myTextArea\").innerHTML = textOutput;\n                  document.getElementById(\"myTextArea1\").innerHTML = textOutput1;\n               } else {\n                  console.log(\"The JSON response is not an array.\");\n               }\n            },\n            error: function(xhr, status, error) {\n               console.log(\"AJAX request error: \" + error);\n            }\n         });\n      }  else if (source === \"File\") {\n         var path = document.getElementById(\"files\").getAttribute(\"value\");\n         var fileType = document.getElementById(\"type\").getAttribute(\"value\");\nvar dateToSend = {\n            'source':\"File\",\n            'filePath': path,\n            'type': fileType\n         };\nconsole.log(\"Filepath: \" + path);\n$.ajax({\n   url: \"/bin/comp/file\",\n   type: \"POST\",\n   data: dateToSend,\n   success: function(data) {\n      console.log(\"AJAX request successful\");\n    if(path.endsWith(\".csv\")){\n     var lines = data.split('\\r\\n');\n     var header = lines[0].split(',');\n     var jsonData = [];\n     for (var i = 1; i < lines.length; i++) {\n       var values = lines[i].split(',');\n       var entry = {};\n      for (var j = 0; j < header.length; j++) {\n        entry[header[j]] = values[j];\n  }\n  jsonData.push(entry);\n}\n document.getElementById(\"myTextArea\").innerHTML = JSON.stringify(jsonData);\n     }\n     else{\n      document.getElementById(\"myTextArea\").innerHTML = data;\n     }\n   },\n   error: function(xhr, status, error) {\n      console.log(\"AJAX request error: \" + error);\n   }\n});\n\n      }\n   });\n\n\n</script>\n<input type=\"hidden\" id=\"member\" name=\"member\"/>\n<input type=\"hidden\" id=\"filldetails\" onclick=\"addFields()\" value=\"Fill Details\"/>\n<div id=\"container\"></div><br/>\n\n<form name=\"\" method=\"POST\" action=\"/apps/demo/form\">\n   <select id=\"actionSelect\" name=\"action\" onchange=\"dropDown()\">\n      <option value=\"add\">Add Record</option>\n      <option value=\"update\">Update Record</option>\n      <option value=\"delete\">Delete Record</option>\n   </select>\n   <br/>\n   <div id=\"nameGroup\">\n      <label for=\"firstName\">Name</label><br/>\n      <input id=\"firstName\" type=\"text\" name=\"firstName\"/><br/>\n   </div>\n   <label for=\"id\">Id</label><br/>\n   <input id=\"id\" type=\"number\" name=\"id\" class=\"id-field\"/> <br/>\n   <div id=\"positionGroup\">\n      <label for=\"position\">Position</label><br/>\n      <input id=\"position\" type=\"text\" name=\"position\"/>\n   </div>\n   <input type=\"submit\" name=\"submit\" value=\"submit\"/>\n</form>\n<br/>\nchecking json data:-\n<br/>\n<div id=\"jsonDiv\">\n<textarea id=\"myTextArea\" cols=\"125\" rows=\"25\"></textarea>\n<textarea id=\"myTextArea1\" cols=\"50\" rows=\"25\"></textarea>\n</div>\n\n<script>\n   var dropdwonVal = document.getElementById(\"actionSelect\");\n\n           function dropDown(){\n               var dropVal = dropdwonVal.options[dropdwonVal.selectedIndex].text;\n               if(dropVal == \"Delete Record\"){\n                   document.getElementById(\"nameGroup\").style.display = \"none\";\n                   document.getElementById(\"positionGroup\").style.display = \"none\";\n               }else{\n                   document.getElementById(\"nameGroup\").style.display = \"block\";\n                   document.getElementById(\"positionGroup\").style.display = \"block\";\n               }\n           }\n</script>\n");
+out.write("\r\n\r\n<script>\r\n   $(document).ready(function() {\r\n      var source = document.querySelector(\".data_source\").getAttribute(\"value\");\r\n      if (source === \"Database\") {\r\n         var inputParameter = document.querySelectorAll(\".inp\");\r\n         var tags = [];\r\n         for (let i = 0; i < inputParameter.length; i++) {\r\n            tags[i] = inputParameter[i].getAttribute(\"value\");\r\n         }\r\n         var dateToSend = {\r\n            'Source':source,\r\n            'Table':tags[0],\r\n            'Actual':tags[1],\r\n            'Display':tags[2],\r\n            'Primary':tags[3],\r\n            'PriCol':tags[4],\r\n         };\r\n         $.ajax({\r\n            url: \"/bin/ayasya/runmode\",\r\n            type: \"POST\",\r\n            data: dateToSend,\r\n            success: function(data) {\r\n               console.log(\"AJAX request successful\");\r\n               console.log(data);\r\n               var name = data.split(\"\\n\");\r\n               var number = name[name.length-2];\r\n               var container = document.getElementById(\"container\");\r\n               while (container.hasChildNodes()) {\r\n                  container.removeChild(container.lastChild);\r\n               }\r\n               for (i=0;i<number;i++){\r\n                var input = document.createElement(\"input\");\r\n                input.id=\"inputText\"+(i+1);\r\n                input.type = \"text\";\r\n                input.value = name[i];\r\n                container.appendChild(input);\r\n                input.setAttribute('readonly', true);\r\n                container.appendChild(document.createElement(\"br\"));\r\n               }\r\n               $(\"#member\").val(name[name.length-2]);\r\n            },\r\n            error: function(xhr, status, error) {\r\n               console.log(\"AJAX request error: \" + error);\r\n            }\r\n         });\r\n      } else if (source === \"Json\") {\r\n         var jsonLink = document.getElementById(\"homepage\").getAttribute(\"value\");\r\n         console.log(\"jsonLink: \" + jsonLink);\r\n         var dateToSend = {\r\n            'jsonLink': jsonLink\r\n         };\r\n         $.ajax({\r\n            url: \"/bin/ayasya/runmode\",\r\n            type: \"POST\",\r\n            data: dateToSend,\r\n            success: function(data) {\r\n               console.log(\"AJAX request successful\");\r\n               console.log(data);\r\n               if (Array.isArray(data)) {\r\n                  var textOutput = \"\";\r\n                  for (let i = 0; i < data.length; i++) {\r\n                     if (\r\n                        data[i].hasOwnProperty(\"id\") &&\r\n                        data[i].hasOwnProperty(\"name\") &&\r\n                        data[i].hasOwnProperty(\"email\")\r\n                     ) {\r\n                        var id = data[i].id;\r\n                        var name = data[i].name;\r\n                        var email = data[i].email;\r\n                        var phone = data[i].phone;\r\n                        textOutput +=\"id: \" + id + \"\\nname: \" + name + \"\\nemail: \" +  email +  \"\\n\\n\";\r\n                     } else {\r\n                        console.log(\r\n                           \"The 'id' field is missing in object at index \" + i\r\n                        );\r\n                     }\r\n                  }\r\n\r\n                  var textOutput1 = \"\";\r\n                  for (let i = 0; i < data.length; i++) {\r\n                     if (data[i].id === 4) {\r\n                        var id = data[i].id;\r\n                        var name = data[i].name;\r\n                        var email = data[i].email;\r\n                        var phone = data[i].phone;\r\n                        textOutput1 +=  \"id: \" + id +   \"\\nname: \" +  name +  \"\\nemail: \" +  email + \"\\nphone: \" + phone +  \"\\n\\n\";\r\n                     }\r\n                  }\r\n\r\n                  document.getElementById(\"myTextArea\").innerHTML = textOutput;\r\n                  document.getElementById(\"myTextArea1\").innerHTML = textOutput1;\r\n               } else {\r\n                  console.log(\"The JSON response is not an array.\");\r\n               }\r\n            },\r\n            error: function(xhr, status, error) {\r\n               console.log(\"AJAX request error: \" + error);\r\n            }\r\n         });\r\n      }  else if (source === \"File\") {\r\n         var path = document.getElementById(\"files\").getAttribute(\"value\");\r\n         var fileType = document.getElementById(\"type\").getAttribute(\"value\");\r\nvar dateToSend = {\r\n            'source':\"File\",\r\n            'filePath': path,\r\n            'type': fileType\r\n         };\r\nconsole.log(\"Filepath: \" + path);\r\n$.ajax({\r\n   url: \"/bin/comp/file\",\r\n   type: \"POST\",\r\n   data: dateToSend,\r\n   success: function(data) {\r\n      console.log(\"AJAX request successful\");\r\n    if(path.endsWith(\".csv\")){\r\n     var lines = data.split('\\r\\n');\r\n     var header = lines[0].split(',');\r\n     var jsonData = [];\r\n     for (var i = 1; i < lines.length; i++) {\r\n       var values = lines[i].split(',');\r\n       var entry = {};\r\n      for (var j = 0; j < header.length; j++) {\r\n        entry[header[j]] = values[j];\r\n  }\r\n  jsonData.push(entry);\r\n}\r\n document.getElementById(\"myTextArea\").innerHTML = JSON.stringify(jsonData);\r\n     }\r\n     else{\r\n      document.getElementById(\"myTextArea\").innerHTML = data;\r\n     }\r\n   },\r\n   error: function(xhr, status, error) {\r\n      console.log(\"AJAX request error: \" + error);\r\n   }\r\n});\r\n\r\n      }\r\n   });\r\n\r\n\r\n</script>\r\n<input type=\"hidden\" id=\"member\" name=\"member\"/>\r\n<input type=\"hidden\" id=\"filldetails\" onclick=\"addFields()\" value=\"Fill Details\"/>\r\n<div id=\"container\"></div><br/>\r\n\r\n<form name=\"\" method=\"POST\" action=\"/apps/demo/form\">\r\n   <select id=\"actionSelect\" name=\"action\" onchange=\"dropDown()\">\r\n      <option value=\"add\">Add Record</option>\r\n      <option value=\"update\">Update Record</option>\r\n      <option value=\"delete\">Delete Record</option>\r\n   </select>\r\n   <br/>\r\n   <div id=\"nameGroup\">\r\n      <label for=\"firstName\">Name</label><br/>\r\n      <input id=\"firstName\" type=\"text\" name=\"firstName\"/><br/>\r\n   </div>\r\n   <label for=\"id\">Id</label><br/>\r\n   <input id=\"id\" type=\"number\" name=\"id\" class=\"id-field\"/> <br/>\r\n   <div id=\"positionGroup\">\r\n      <label for=\"position\">Position</label><br/>\r\n      <input id=\"position\" type=\"text\" name=\"position\"/>\r\n   </div>\r\n   <input type=\"submit\" name=\"submit\" value=\"submit\"/>\r\n</form>\r\n<br/>\r\nchecking json data:-\r\n<br/>\r\n<div id=\"jsonDiv\">\r\n<textarea id=\"myTextArea\" cols=\"125\" rows=\"25\"></textarea>\r\n<textarea id=\"myTextArea1\" cols=\"50\" rows=\"25\"></textarea>\r\n</div>\r\n\r\n<script>\r\n   var dropdwonVal = document.getElementById(\"actionSelect\");\r\n\r\n           function dropDown(){\r\n               var dropVal = dropdwonVal.options[dropdwonVal.selectedIndex].text;\r\n               if(dropVal == \"Delete Record\"){\r\n                   document.getElementById(\"nameGroup\").style.display = \"none\";\r\n                   document.getElementById(\"positionGroup\").style.display = \"none\";\r\n               }else{\r\n                   document.getElementById(\"nameGroup\").style.display = \"block\";\r\n                   document.getElementById(\"positionGroup\").style.display = \"block\";\r\n               }\r\n           }\r\n</script>\r\n");
 
 
 // End Of Main Template Body ----------------------------------------------------------------------

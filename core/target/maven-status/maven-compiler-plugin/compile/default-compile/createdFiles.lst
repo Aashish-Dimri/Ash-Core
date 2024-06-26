@@ -1,9 +1,10 @@
 com\indusind\aem\platform\core\listeners\PropertyEventHandlerOSGI.class
 com\indusind\aem\platform\core\models\AashishServiceToModel.class
+com\indusind\aem\platform\core\jobs\MyProjectJobConsumer.class
+com\indusind\aem\platform\core\servlets\DemoMicroserviceServlet.class
 com\indusind\aem\platform\core\services\AashishConfig.class
 com\indusind\aem\platform\core\services\impl\AashishConfigImpl.class
 com\indusind\aem\platform\core\filters\LoggingFilter.class
-com\indusind\aem\platform\core\schedulers\SchedulerConfig.class
 com\indusind\aem\platform\core\servlets\SimpleServlet.class
 com\indusind\aem\platform\core\servlets\QueryBuilderServlet.class
 com\indusind\aem\platform\core\models\ModelData.class
@@ -18,9 +19,9 @@ com\indusind\aem\platform\core\servlets\RunModes.class
 com\indusind\aem\platform\core\filters\package-info.class
 com\indusind\aem\platform\core\listeners\package-info.class
 com\indusind\aem\platform\core\workflow\WorkflowServlet.class
-com\indusind\aem\platform\core\schedulers\SchedulerConfigImpl.class
 com\indusind\aem\platform\core\servlets\package-info.class
 com\indusind\aem\platform\core\models\Author.class
+com\indusind\aem\platform\core\jobs\MyProjectJobManager.class
 com\indusind\aem\platform\core\servlets\AashishServiceToServlet.class
 com\indusind\aem\platform\core\schedulers\DemoConfig.class
 com\indusind\aem\platform\core\schedulers\demoScheduler.class
@@ -29,7 +30,9 @@ com\indusind\aem\platform\core\listeners\PageEventHandler.class
 com\indusind\aem\platform\core\models\YourDataModel.class
 com\indusind\aem\platform\core\listeners\SimpleResourceListener.class
 com\indusind\aem\platform\core\workflow\AshsWorkflowProcess.class
+com\indusind\aem\platform\core\models\AppModel.class
 com\indusind\aem\platform\core\listeners\PropertyEventListenerJCR.class
 com\indusind\aem\platform\core\schedulers\package-info.class
 com\indusind\aem\platform\core\schedulers\SimpleScheduledTask$Config.class
+com\indusind\aem\platform\core\services\DemoMicroService.class
 com\indusind\aem\platform\core\services\ReadWriteServiceImpl.class

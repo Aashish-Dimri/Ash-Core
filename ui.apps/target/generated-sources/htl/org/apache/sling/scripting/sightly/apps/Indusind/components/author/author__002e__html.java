@@ -36,17 +36,17 @@ public final class author__002e__html extends RenderUnit {
 
 Object _global_model = null;
 _global_model = renderContext.call("use", com.indusind.aem.platform.core.models.AuthorImpl.class.getName(), obj());
-out.write("\n\n    <div>\n        <b>First Name:</b>");
+out.write("\r\n\r\n    <div>\r\n        <b>First Name:</b>");
 {
     String var_0 = (" " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_global_model, "fname"), "text")));
     out.write(renderContext.getObjectModel().toString(var_0));
 }
-out.write("<br/>\n        <b>Last Name:</b>");
+out.write("<br/>\r\n        <b>Last Name:</b>");
 {
-    String var_1 = ((" " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_global_model, "lname"), "text"))) + "\n    ");
+    String var_1 = ((" " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_global_model, "lname"), "text"))) + "\r\n    ");
     out.write(renderContext.getObjectModel().toString(var_1));
 }
-out.write("</div>\n    ");
+out.write("</div>\r\n    ");
 
 
 // End Of Main Template Body ----------------------------------------------------------------------

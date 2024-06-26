@@ -35,12 +35,12 @@ public final class WORLD__002e__html extends RenderUnit {
 // Main Template Body -----------------------------------------------------------------------------
 
 Object _dynamic_properties = bindings.get("properties");
-out.write("<div>\n    <h2>World</h2>\n    <div>\n        <pre>");
+out.write("<div>\r\n    <h2>World</h2>\r\n    <div>\r\n        <pre>");
 {
     Object var_0 = renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_properties, "text"), "text");
     out.write(renderContext.getObjectModel().toString(var_0));
 }
-out.write("</pre>\n    </div>\n</div>");
+out.write("</pre>\r\n    </div>\r\n</div>");
 
 
 // End Of Main Template Body ----------------------------------------------------------------------
