@@ -5,7 +5,9 @@ C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusin
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\schedulers\DemoConfig.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\servlets\QueryBuilderServlet.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\services\impl\AashishConfigImpl.java
+C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\models\CAConfig.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\servlets\AIchatServlet.java
+C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\models\CAConfigImpl.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\models\MegaMenuModel.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\schedulers\demoScheduler.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\models\YourDataModel.java
@@ -20,14 +22,17 @@ C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusin
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\filters\LoggingFilter.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\models\Author.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\models\package-info.java
+C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\services\ASHCAConfig.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\services\DemoMicroService.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\workflow\AshsWorkflowProcess.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\jobs\MyProjectJobManager.java
+C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\services\DataBaseConnection.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\listeners\PropertyEventHandlerOSGI.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\servlets\AashishServiceToServlet.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\models\ModelData.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\servlets\ExcelToJSON.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\workflow\WorkflowServlet.java
+C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\servlets\Dbcrud.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\servlets\SimpleServlet.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\models\AuthorImpl.java
 C:\Users\lenovo\Desktop\ASH\AEM-Projects\Ash-Core\core\src\main\java\com\indusind\aem\platform\core\schedulers\SimpleScheduledTask.java

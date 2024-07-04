@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dropdown"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <selection
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Selection"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dropdown
+                                                granite:class="cq-dialog-dropdown-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Data Source "
+                                                name="./dataDropdown">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <Create
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Create"
+                                                        value="Create"/>
+                                                    <Update
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Update"
+                                                        value="Update"/>
+                                                    <Delete
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Delete"
+                                                        value="Delete"/>
+                                                    <Read
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Read"
+                                                        value="Read"/>
+                                                </items>
+                                            </dropdown>
+                                            <targetHead
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <targetCreate
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        fieldLabel="Create Action">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="Create"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="First Name"
+                                                                name="./cfname"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                            <lname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Last Name"
+                                                                name="./clname"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                            <id
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="ID"
+                                                                name="./cid"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                            <position
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Position"
+                                                                name="./cposition"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                        </items>
+                                                    </targetCreate>
+                                                    <targetUpdate
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        fieldLabel="Create Action">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="Update"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="First Name"
+                                                                name="./ufname"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                            <lname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Last Name"
+                                                                name="./ulname"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                            <id
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="ID"
+                                                                name="./uid"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                            <position
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Position"
+                                                                name="./uposition"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                        </items>
+                                                    </targetUpdate>
+                                                    <targetDelete
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        fieldLabel="Create Action">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="Delete"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <id
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="ID"
+                                                                name="./did"
+                                                                required="{Boolean}true"
+                                                                text="typing"/>
+                                                        </items>
+                                                    </targetDelete>
+                                                    <targetRead
+                                                        granite:class="showhidetargets"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        fieldLabel="Read Action">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="Read"/>
+                                                    </targetRead>
+                                                </items>
+                                            </targetHead>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </selection>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -3,7 +3,9 @@ com\indusind\aem\platform\core\models\AashishServiceToModel.class
 com\indusind\aem\platform\core\jobs\MyProjectJobConsumer.class
 com\indusind\aem\platform\core\servlets\DemoMicroserviceServlet.class
 com\indusind\aem\platform\core\services\AashishConfig.class
+com\indusind\aem\platform\core\services\DataBaseConnection.class
 com\indusind\aem\platform\core\services\impl\AashishConfigImpl.class
+com\indusind\aem\platform\core\models\CAConfig.class
 com\indusind\aem\platform\core\filters\LoggingFilter.class
 com\indusind\aem\platform\core\servlets\ExcelToJSON.class
 com\indusind\aem\platform\core\servlets\SimpleServlet.class
@@ -14,8 +16,10 @@ com\indusind\aem\platform\core\listeners\ResolverUtil.class
 com\indusind\aem\platform\core\servlets\ExcelToJSON$1.class
 com\indusind\aem\platform\core\models\HelloWorldModel.class
 com\indusind\aem\platform\core\models\MegaMenuModel.class
+com\indusind\aem\platform\core\models\CAConfigImpl.class
 com\indusind\aem\platform\core\servlets\CustomSearchServlet.class
 com\indusind\aem\platform\core\schedulers\SimpleScheduledTask.class
+com\indusind\aem\platform\core\services\ASHCAConfig.class
 com\indusind\aem\platform\core\servlets\AIchatServlet.class
 com\indusind\aem\platform\core\workflow\AshWorkflowStep.class
 com\indusind\aem\platform\core\servlets\RunModes.class
@@ -24,6 +28,7 @@ com\indusind\aem\platform\core\listeners\package-info.class
 com\indusind\aem\platform\core\workflow\WorkflowServlet.class
 com\indusind\aem\platform\core\servlets\package-info.class
 com\indusind\aem\platform\core\models\Author.class
+com\indusind\aem\platform\core\servlets\Dbcrud.class
 com\indusind\aem\platform\core\jobs\MyProjectJobManager.class
 com\indusind\aem\platform\core\servlets\AashishServiceToServlet.class
 com\indusind\aem\platform\core\schedulers\DemoConfig.class
