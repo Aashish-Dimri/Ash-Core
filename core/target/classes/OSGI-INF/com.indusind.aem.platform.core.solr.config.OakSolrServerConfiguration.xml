@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.indusind.aem.platform.core.solr.config.OakSolrServerConfiguration" activate="activate" modified="activate">
+  <property name="solrServerUrl" type="String" value="http://localhost:8983/solr/"/>
+  <property name="solrCoreName" type="String" value="aashish"/>
+  <service>
+    <provide interface="com.indusind.aem.platform.core.solr.config.OakSolrServerConfiguration"/>
+  </service>
+  <implementation class="com.indusind.aem.platform.core.solr.config.OakSolrServerConfiguration"/>
+</scr:component>

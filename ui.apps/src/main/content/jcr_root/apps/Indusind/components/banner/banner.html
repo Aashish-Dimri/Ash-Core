@@ -1,0 +1,84 @@
+<style>
+  <sly>
+    .cmp-banner-section {
+      width: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-image:url("/content/dam/HDFCSavingsUnifiedURL/banners/480x140.jpg");
+      height: 120px;	
+    }
+    @media (min-width: 480px) {
+      .cmp-banner-section {
+	    background-image:url("/content/dam/HDFCSavingsUnifiedURL/banners/320x120.jpg");
+        height: 140px;	
+	  }
+    }
+    @media (min-width: 768px) {
+      .cmp-banner-section {
+	    background-image:url("/content/dam/HDFCSavingsUnifiedURL/banners/716x298.jpg");
+        height: 160px;	
+	  }
+    }
+    @media (min-width: 992px) {
+      .cmp-banner-section {
+	    background-image:url("/content/dam/HDFCSavingsUnifiedURL/banners/1440x200.jpg");
+        height: 200px;	
+	  }
+    }
+  </sly>
+</style>
+
+<a data-sly-use.banner="banner.js" data-sly-unwrap="${!banner.linkUrl}" class="cmp-image__link" href="${banner.linkUrl}"
+       data-cmp-clickable="${banner.data ? true : false}" data-cmp-hook-image="linkUrl" target="_blank">
+       <div class="cmp-banner-section"></div>
+       ${banner.linkUrl}
+</a>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var urlParams = new URLSearchParams(window.location.search);
+        var cCode = urlParams.get('cCode');
+        var bCode = urlParams.get('bCode');
+        var xhr = new XMLHttpRequest();
+        
+        xhr.open('GET', '/bin/custom/hello?cCode=' + encodeURIComponent(cCode) + '&bCode=' + encodeURIComponent(bCode), true);
+        xhr.onreadystatechange = function () {
+        
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var contentType = xhr.getResponseHeader('Content-Type');
+                    if (contentType && contentType.includes('application/json')) {
+                      
+                      try {
+                            var response = JSON.parse(xhr.responseText);
+                            displayResults(response);
+                        } catch (e) {
+                            console.error('Error parsing JSON:', e);
+                        }
+                    } else {
+                        console.log('Non-JSON response:', xhr.responseText);
+                    }
+                } else {
+                    console.error('Error:', xhr.status, xhr.statusText);
+                }
+            }
+        };
+
+        xhr.onerror = function () {
+            console.error('Request failed');
+        };
+
+        xhr.send();
+    });
+    function displayResults(response) {
+        if (response.bassFlow) {
+        	console.log("RESPONSE" + response);
+            var bannerSection = document.querySelector('.cmp-banner-section');
+            bannerSection.style.backgroundImage = 'url(' + response.webfile + ')';
+            bannerSection.style.height = '200px';
+        } else {
+        	console.log("RESPONSE" + response);
+            console.error('No valid bass code match');
+        }
+    }
+</script>

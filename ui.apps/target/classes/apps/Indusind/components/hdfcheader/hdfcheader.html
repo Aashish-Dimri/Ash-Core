@@ -1,0 +1,53 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var headerNamespace = {};  // Unique namespace for the header component
+        headerNamespace.init = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var cCode = urlParams.get('cCode');
+            var bCode = urlParams.get('bCode');
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', '/bin/custom/hello?cCode=' + encodeURIComponent(cCode) + '&bCode=' + encodeURIComponent(bCode), true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var contentType = xhr.getResponseHeader('Content-Type');
+                        if (contentType && contentType.includes('application/json')) {
+                            try {
+                                var response = JSON.parse(xhr.responseText);
+                                headerNamespace.displayResults(response);
+                            } catch (e) {
+                                console.error('Error parsing JSON:', e);
+                            }
+                        } else {
+                            console.log('Non-JSON response:', xhr.responseText);
+                        }
+                    } else {
+                        console.error('Error:', xhr.status, xhr.statusText);
+                    }
+                }
+            };
+
+            xhr.onerror = function () {
+                console.error('Request failed');
+            };
+
+            xhr.send();
+        };
+
+        headerNamespace.displayResults = function (response) {
+            var logoImage = document.querySelector('.logo2');
+            if (response.bassFlow) {
+                logoImage.src = response.logo;
+            } else {
+                console.error('No valid bass code match');
+            }
+        };
+
+        headerNamespace.init(); // Initialize the header component script
+    });
+</script>
+
+
+<img src="/content/dam/HDFCSavingsUnifiedURL/banners/logo.svg" alt="logo1">
+<img class="logo2" src="">

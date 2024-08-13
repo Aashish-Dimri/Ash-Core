@@ -27,23 +27,29 @@ Import-Package: javax.annotation;version="0.0.0",com.adobe.granite.wor
  atform.core.schedulers;version="[1.0,2)",com.mysql.cj.jdbc,javax.jcr;
  version="[2.0,3)",javax.jcr.observation;version="[2.0,3)",javax.servl
  et;version="[3.1,4)",org.apache.commons.lang3;version="[3.12,4)",org.
- apache.poi.ss.usermodel;version="[3.0,4)",org.apache.poi.xssf.usermod
- el;version="[3.0,4)",org.apache.sling.api;version="[2.3,3)",org.apach
- e.sling.api.request;version="[2.4,3)",org.apache.sling.api.resource;v
- ersion="[2.12,3)",org.apache.sling.api.resource.observation;version="
- [1.2,2)",org.apache.sling.api.servlets;version="[2.3,3)",org.apache.s
- ling.caconfig;version="[1.0,2)",org.apache.sling.caconfig.annotation;
- version="[1.1,2)",org.apache.sling.commons.scheduler;version="[2.5,3)
- ",org.apache.sling.event.jobs;version="[2.0,3)",org.apache.sling.even
- t.jobs.consumer;version="[1.2,2)",org.apache.sling.jcr.api;version="[
- 2.4,3)",org.apache.sling.models.annotations;version="[1.5,2)",org.apa
- che.sling.models.annotations.injectorspecific;version="[1.1,2)",org.a
- pache.sling.settings;version="[1.3,2)",org.osgi.service.component;ver
- sion="[1.4,2)",org.osgi.service.event;version="[1.3,2)",org.slf4j;ver
- sion="[1.7,2)"
+ apache.http;version="[4.4,5)",org.apache.http.client.methods;version=
+ "[4.5,5)",org.apache.http.entity;version="[4.4,5)",org.apache.http.im
+ pl.client;version="[4.5,5)",org.apache.http.util;version="[4.4,5)",or
+ g.apache.poi.ss.usermodel;version="[3.0,4)",org.apache.poi.xssf.userm
+ odel;version="[3.0,4)",org.apache.sling.api;version="[2.3,3)",org.apa
+ che.sling.api.request;version="[2.4,3)",org.apache.sling.api.resource
+ ;version="[2.12,3)",org.apache.sling.api.resource.observation;version
+ ="[1.2,2)",org.apache.sling.api.servlets;version="[2.3,3)",org.apache
+ .sling.caconfig;version="[1.0,2)",org.apache.sling.caconfig.annotatio
+ n;version="[1.1,2)",org.apache.sling.commons.scheduler;version="[2.5,
+ 3)",org.apache.sling.event.jobs;version="[2.0,3)",org.apache.sling.ev
+ ent.jobs.consumer;version="[1.2,2)",org.apache.sling.jcr.api;version=
+ "[2.4,3)",org.apache.sling.models.annotations;version="[1.5,2)",org.a
+ pache.sling.models.annotations.injectorspecific;version="[1.1,2)",org
+ .apache.sling.settings;version="[1.3,2)",org.json;version="[20090211.
+ 0,20090212)",org.osgi.service.component;version="[1.4,2)",org.osgi.se
+ rvice.event;version="[1.3,2)",org.slf4j;version="[1.7,2)"
 Private-Package: com.indusind.aem.platform.core.jobs,com.indusind.aem.
  platform.core.services,com.indusind.aem.platform.core.services.impl,c
- om.indusind.aem.platform.core.workflow
+ om.indusind.aem.platform.core.solr.config,com.indusind.aem.platform.c
+ ore.solr.scheduler,com.indusind.aem.platform.core.solr.service,com.in
+ dusind.aem.platform.core.solr.servlets,com.indusind.aem.platform.core
+ .workflow
 Provide-Capability: osgi.service;objectClass:List<String>="com.adobe.g
  ranite.workflow.exec.WorkflowProcess";uses:="com.adobe.granite.workfl
  ow.exec",osgi.service;objectClass:List<String>="com.indusind.aem.plat
@@ -53,30 +59,42 @@ Provide-Capability: osgi.service;objectClass:List<String>="com.adobe.g
  em.platform.core.services",osgi.service;objectClass:List<String>="com
  .indusind.aem.platform.core.services.impl.AashishConfigImpl";uses:="c
  om.indusind.aem.platform.core.services.impl",osgi.service;objectClass
- :List<String>="java.lang.Runnable",osgi.service;objectClass:List<Stri
- ng>="javax.jcr.observation.EventListener";uses:="javax.jcr.observatio
- n",osgi.service;objectClass:List<String>="javax.servlet.Filter";uses:
- ="javax.servlet",osgi.service;objectClass:List<String>="javax.servlet
- .Servlet";uses:="javax.servlet",osgi.service;objectClass:List<String>
- ="org.apache.sling.api.resource.observation.ResourceChangeListener";u
- ses:="org.apache.sling.api.resource.observation",osgi.service;objectC
- lass:List<String>="org.apache.sling.event.jobs.consumer.JobConsumer";
- uses:="org.apache.sling.event.jobs.consumer",osgi.service;objectClass
- :List<String>="org.osgi.service.event.EventHandler";uses:="org.osgi.s
- ervice.event"
+ :List<String>="com.indusind.aem.platform.core.solr.config.OakSolrServ
+ erConfiguration";uses:="com.indusind.aem.platform.core.solr.config",o
+ sgi.service;objectClass:List<String>="com.indusind.aem.platform.core.
+ solr.service.SolrIndexingService";uses:="com.indusind.aem.platform.co
+ re.solr.service",osgi.service;objectClass:List<String>="com.indusind.
+ aem.platform.core.solr.service.SolrQueryService";uses:="com.indusind.
+ aem.platform.core.solr.service",osgi.service;objectClass:List<String>
+ ="java.lang.Runnable",osgi.service;objectClass:List<String>="javax.jc
+ r.observation.EventListener";uses:="javax.jcr.observation",osgi.servi
+ ce;objectClass:List<String>="javax.servlet.Filter";uses:="javax.servl
+ et",osgi.service;objectClass:List<String>="javax.servlet.Servlet";use
+ s:="javax.servlet",osgi.service;objectClass:List<String>="org.apache.
+ sling.api.resource.observation.ResourceChangeListener";uses:="org.apa
+ che.sling.api.resource.observation",osgi.service;objectClass:List<Str
+ ing>="org.apache.sling.event.jobs.consumer.JobConsumer";uses:="org.ap
+ ache.sling.event.jobs.consumer",osgi.service;objectClass:List<String>
+ ="org.osgi.service.event.EventHandler";uses:="org.osgi.service.event"
 Require-Capability: osgi.service;filter:="(objectClass=com.day.cq.sear
  ch.QueryBuilder)";effective:=active,osgi.service;filter:="(objectClas
  s=com.indusind.aem.platform.core.services.DemoMicroService)";effectiv
  e:=active,osgi.service;filter:="(objectClass=com.indusind.aem.platfor
  m.core.services.impl.AashishConfigImpl)";effective:=active,osgi.servi
- ce;filter:="(objectClass=org.apache.sling.api.resource.ResourceResolv
- erFactory)";effective:=active,osgi.service;filter:="(objectClass=org.
- apache.sling.commons.scheduler.Scheduler)";effective:=active,osgi.ser
- vice;filter:="(objectClass=org.apache.sling.jcr.api.SlingRepository)"
- ;effective:=active,osgi.service;filter:="(objectClass=org.apache.slin
- g.settings.SlingSettingsService)";effective:=active,osgi.extender;fil
- ter:="(&(osgi.extender=osgi.component)(version>=1.4.0)(!(version>=2.0
- .0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+ ce;filter:="(objectClass=com.indusind.aem.platform.core.solr.config.O
+ akSolrServerConfiguration)";effective:=active,osgi.service;filter:="(
+ objectClass=com.indusind.aem.platform.core.solr.service.SolrIndexingS
+ ervice)";effective:=active,osgi.service;filter:="(objectClass=com.ind
+ usind.aem.platform.core.solr.service.SolrQueryService)";effective:=ac
+ tive,osgi.service;filter:="(objectClass=org.apache.sling.api.resource
+ .ResourceResolverFactory)";effective:=active,osgi.service;filter:="(o
+ bjectClass=org.apache.sling.commons.scheduler.Scheduler)";effective:=
+ active,osgi.service;filter:="(objectClass=org.apache.sling.jcr.api.Sl
+ ingRepository)";effective:=active,osgi.service;filter:="(objectClass=
+ org.apache.sling.settings.SlingSettingsService)";effective:=active,os
+ gi.extender;filter:="(&(osgi.extender=osgi.component)(version>=1.4.0)
+ (!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8
+ ))"
 Service-Component: OSGI-INF/com.indusind.aem.platform.core.filters.Log
  gingFilter.xml,OSGI-INF/com.indusind.aem.platform.core.jobs.MyProject
  JobConsumer.xml,OSGI-INF/com.indusind.aem.platform.core.jobs.MyProjec
@@ -96,12 +114,22 @@ Service-Component: OSGI-INF/com.indusind.aem.platform.core.filters.Log
  t.xml,OSGI-INF/com.indusind.aem.platform.core.servlets.Dbcrud.xml,OSG
  I-INF/com.indusind.aem.platform.core.servlets.DemoMicroserviceServlet
  .xml,OSGI-INF/com.indusind.aem.platform.core.servlets.ExcelToJSON.xml
- ,OSGI-INF/com.indusind.aem.platform.core.servlets.QueryBuilderServlet
- .xml,OSGI-INF/com.indusind.aem.platform.core.servlets.RunModes.xml,OS
- GI-INF/com.indusind.aem.platform.core.servlets.SimpleServlet.xml,OSGI
- -INF/com.indusind.aem.platform.core.workflow.AshWorkflowStep.xml,OSGI
- -INF/com.indusind.aem.platform.core.workflow.AshsWorkflowProcess.xml,
- OSGI-INF/com.indusind.aem.platform.core.workflow.WorkflowServlet.xml
+ ,OSGI-INF/com.indusind.aem.platform.core.servlets.GetPostServlet.xml,
+ OSGI-INF/com.indusind.aem.platform.core.servlets.HelloServlet.xml,OSG
+ I-INF/com.indusind.aem.platform.core.servlets.PostServlet.xml,OSGI-IN
+ F/com.indusind.aem.platform.core.servlets.QueryBuilderServlet.xml,OSG
+ I-INF/com.indusind.aem.platform.core.servlets.RunModes.xml,OSGI-INF/c
+ om.indusind.aem.platform.core.servlets.SimpleServlet.xml,OSGI-INF/com
+ .indusind.aem.platform.core.solr.config.OakSolrServerConfiguration.xm
+ l,OSGI-INF/com.indusind.aem.platform.core.solr.scheduler.SolrDataExpo
+ rtScheduler.xml,OSGI-INF/com.indusind.aem.platform.core.solr.service.
+ SolrIndexingService.xml,OSGI-INF/com.indusind.aem.platform.core.solr.
+ service.SolrQueryService.xml,OSGI-INF/com.indusind.aem.platform.core.
+ solr.servlets.SolrIndexingServlet.xml,OSGI-INF/com.indusind.aem.platf
+ orm.core.solr.servlets.SolrQueryServlet.xml,OSGI-INF/com.indusind.aem
+ .platform.core.workflow.AshWorkflowStep.xml,OSGI-INF/com.indusind.aem
+ .platform.core.workflow.AshsWorkflowProcess.xml,OSGI-INF/com.indusind
+ .aem.platform.core.workflow.WorkflowServlet.xml
 Sling-Model-Classes: com.indusind.aem.platform.core.models.AashishServ
  iceToModel,com.indusind.aem.platform.core.models.AppModel,com.indusin
  d.aem.platform.core.models.AuthorImpl,com.indusind.aem.platform.core.

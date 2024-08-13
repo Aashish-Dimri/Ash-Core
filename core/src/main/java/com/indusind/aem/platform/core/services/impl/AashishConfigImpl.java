@@ -8,20 +8,27 @@ import org.slf4j.LoggerFactory;
 
 import com.indusind.aem.platform.core.services.AashishConfig;
 
-import lombok.Getter;
-
 @Component(immediate = true,service = AashishConfigImpl.class)
 @Designate(ocd = AashishConfig.class)
  public class AashishConfigImpl{  
-    
-    @Getter
+       
     private volatile boolean isEnabled;
-
-    @Getter
+    
     private volatile String fullName;
 
-    @Getter
     private volatile String customProperty;
+
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getCustomProperty() {
+        return customProperty;
+    }
 
     private static final Logger log= LoggerFactory.getLogger(AashishConfigImpl.class);  
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.indusind.aem.platform.core.solr.scheduler.SolrDataExportScheduler" immediate="true" activate="activate" deactivate="deactivate">
+  <property name="serviceEnabled" type="Boolean" value="true"/>
+  <property name="schedulerName" type="String" value="Scheduler Configurations for Exporting data to SOLR"/>
+  <property name="schedulerConcurrent" type="Boolean" value="false"/>
+  <property name="schedulerExpression" type="String" value="0 30 10-23 * * ?"/>
+  <service>
+    <provide interface="java.lang.Runnable"/>
+  </service>
+  <reference name="resourceResolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" field="resourceResolverFactory"/>
+  <reference name="scheduler" interface="org.apache.sling.commons.scheduler.Scheduler" field="scheduler"/>
+  <reference name="solrConfig" interface="com.indusind.aem.platform.core.solr.config.OakSolrServerConfiguration" field="solrConfig"/>
+  <implementation class="com.indusind.aem.platform.core.solr.scheduler.SolrDataExportScheduler"/>
+</scr:component>

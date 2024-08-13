@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.indusind.aem.platform.core.solr.service.SolrQueryService">
+  <service>
+    <provide interface="com.indusind.aem.platform.core.solr.service.SolrQueryService"/>
+  </service>
+  <reference name="solrConfig" interface="com.indusind.aem.platform.core.solr.config.OakSolrServerConfiguration" field="solrConfig"/>
+  <implementation class="com.indusind.aem.platform.core.solr.service.SolrQueryService"/>
+</scr:component>
